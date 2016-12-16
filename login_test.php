@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><title>Login</title></head><body>
+
+<div>
+<form name="loginform" id="loginform" class="form-group" action="login.php" method="post">
+	<fieldset>
+		<legend>Authentification</legend>
+	<label>Username</label><input id="user_name" name="user_name"><br>
+	<label>Password</label><input id="pass_word" type="password" name="pass_word"><br>
+	<button type="reset">Effacer</button>
+	<button type="submit">Connexion</button>
+	</fieldset>
+</form>
+</div>
+
+<div>
+	<form name="signform" id="signform" method="post" action="signup.php">
+		<fieldset>
+			<legend>Inscription</legend>
+		<label>Nom : </label>
+		<input name="sign_user_name"><br>
+		<label>Prenom : </label>
+		<input name="sign_user_surname"><br>
+		<label>Email : </label>
+		<input name="sign_user_email"><br>
+		<label>Mot de passe : </label>
+		<input type="password" name="sign_user_password" id=""><br>
+		<label>Date de naissance : </label>
+		<select name="birth_day">
+			<?php for ($i = 1; $i <= 31; $i++){
+				echo "<option value=".$i.">".$i."</option>";};
+			?>
+		</select>
+				<select name="birth_month">
+			<option value="01">Janvier</option>
+			<option value="02">Février</option>
+			<option value="03">Mars</option>
+			<option value="04">Avril</option>
+			<option value="05">Mai</option>
+			<option value="06">Juin</option>
+			<option value="07">Juillet</option>
+			<option value="08">Aout</option>
+			<option value="09">Septembre</option>
+			<option value="10">Octobre</option>
+			<option value="11">Novembre</option>
+			<option value="12">Décembre</option>Mois
+		</select>
+		<select name="birth_year">
+			<?php for ($i = 2016; $i >= 1900; $i--){
+				echo "<option value=".$i.">".$i."</option>";}
+			?>
+		</select><br>
+		<label>Sexe : </label>
+		<input type="radio" name="sign_user_gender" value="male">Homme
+		<input type="radio" name="sign_user_gender" value="female">Femme</input><br>
+		<button type="reset">Effacer</button>
+		<button type="submit">Inscription</button>
+		</fieldset>
+	</form>
+
+</div>
+
+</body></html>

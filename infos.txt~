@@ -1,0 +1,67 @@
+CREATE TABLE IF NOT EXISTS xamxam_khassaide (xamxam_khassaide_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT, xamxam_khassaide_title VARCHAR(100) NOT NULL, xamxam_khassaide_text TEXT, xamxam_khassaide_author VARCHAR(100), xamxam_khassaide_comment TEXT, PRIMARY KEY (xamxam_khassaide_id) ) CHARACTER SET utf8mb3 ENGINE=INNODB;
+
+INSERT INTO xamxam_khassaide(xamxam_khassaide_title, xamxam_khassaide_text, xamxam_khassaide_author, xamxam_khassaide_comment) VALUES ('الشفاء', 'الشفاء', 'Cheikh Ahmadou Bamba', 'La recerche du remède');
+
+
+CREATE TABLE IF NOT EXISTS xamxam_test (xamxam_khassaide_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT, xamxam_khassaide_title VARCHAR(100) character set utf8 NOT NULL, xamxam_khassaide_text TEXT character set utf8, xamxam_khassaide_author VARCHAR(100), xamxam_khassaide_comment TEXT, PRIMARY KEY (xamxam_khassaide_id) ) CHARACTER SET cp1256 ENGINE=INNODB;
+
+
+====================
+===INJECTIONS SQL===
+====================
+inurl:"login.php" senegal RECHERCHE PAGE EN PHP
+REQUETES ' OR '1'='1' AND pass='' OR '1'='1';#
+		' OR '1'='1';#
+
+https://openclassrooms.com/courses/protegez-vous-efficacement-contre-les-failles-web/l-injection-sql-1
+
+
+CREATE TABLE IF NOT EXISTS xamxam_files (xamxam_files_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, xamxam_files_title VARCHAR(100) NOT NULL, xamxam_xamxam_files_author VARCHAR(100), xamxam_files_comment TEXT, xamxam_files_size INT, xamxam_files_path VARCHAR(100));
+
+ALTER TABLE ADD xamxam_files_date DATE NOT NULL;
+
+ALTER TABLE xamxam_khassaide DROP xamxam_file_date;
+
+ALTER TABLE xamxam_files CHANGE  xamxam_xamxam_files_author xamxam_files_author  VARCHAR(100);
+
+INSERT INTO xamxam_files(xamxam_files_title,xamxam_files_author,xamxam_files_text,xamxam_files_size,xamxam_files_path,xamxam_files_date) VALUES (:title,:author,:text,:size,:path,:date);");
+
+"INSERT INTO xamxam_files(xamxam_files_title,xamxam_files_author,xamxam_files_text,xamxam_files_size,xamxam_files_path,xamxam_files_date) VALUES (:title,:author,:text,:size,:path,:date);");
+
+INSERT INTO xamxam_files(xamxam_files_title,xamxam_files_author,xamxam_files_text,xamxam_files_size,xamxam_files_path,xamxam_files_date) VALUES ('$upload_title', '$upload_author', '$upload_text', '$size_image', '$path_image', '$upload_date');
+
+
+GRANT ALL ON xamxam TO 'www-data'@'localhost' IDENTIFIED BY 'aaaaa';
+
+
+CREATE TABLE IF NOT EXISTS users (userpk SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(100) NOT NULL, user_password VARCHAR(100), user_email VARCHAR(100));
+
+
+CREATE TABLE IF NOT EXISTS users (userpk SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, user_name VARCHAR(100) NOT NULL, user_surname VARCHAR(100) NOT NULL, user_email VARCHAR(100),  user_password VARCHAR(100), user_birthday DATE, user_sex CHAR(1));
+
+CREATE TABLE IF NOT EXISTS posts (post_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, post_title VARCHAR(100) NOT NULL, post_description VARCHAR(100), post_guid VARCHAR(100), post_date_pub DATE);
+
+
+NUMBER ROW
+$mysql->query( 'SELECT COUNT(postpk) FROM posts;' );
+
+FETCH PDO while
+
+
+
+FETCH PDO for
+
+$requete_posts = $mysql->prepare("SELECT * FROM posts;");
+$requete_posts->execute();
+$requete_posts->setFetchMode(PDO::FETCH_OBJ);
+$num_lignes = $requete_posts->rowCount();
+$lignes = $requete_posts->fetchAll();
+for( $i=1; $i <= $num_lignes; $i++){
+	echo "<br>".$lignes[$i]->post_author;
+	}
+
+====================
+===image dans echo==
+====================
+
+echo'<img src="'.$chemin_image.'" />';
